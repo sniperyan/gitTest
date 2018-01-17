@@ -32,9 +32,11 @@ echo ">>>>>> push changes to iOS git"
 #   git rebase origin/master
   if [ true ]; then
     echo ">>>>>> 5) start to push"
-    abc=`./push.sh master`
+    abc=`./push.sh master 2>&1`
+    echo $?
     echo "push返回值: "${abc}  
     # echo ">>>>>> 6) end to push"
+    echo $?
     if [[ "$?" != "0" ]]; then
       echo ">>>>>> GIT PUSH Failed!!! ...."
       doErrorExit
