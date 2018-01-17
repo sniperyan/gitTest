@@ -32,6 +32,7 @@ echo ">>>>>> push changes to iOS git"
 #   git rebase origin/master
   if [ true ]; then
     echo ">>>>>> 5) start to push"
+    # 保存结果的变量名=`需要执行的linux命令 2>&1 `的方式来获取命令的执行结果
     abc=`./push.sh master 2>&1`
     echo $?
     echo "push返回值: "${abc}  
